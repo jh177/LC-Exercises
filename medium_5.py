@@ -1,13 +1,6 @@
-# 1. helper function to check if palindromic
+# 1. helper function to check longest palindromic starting from two pointers
+# 2. loop through string and expand from index to check longest palindromic
 
-# 2. two pointer i, j
-# 
-
-# j moves forward until s[i:j] includes s[j+1]
-# compare s[i: j+1] with longest, max_len = len(longest)
-# then i+=1, j = i+max_len
-# then if s[i:j] to set length not equal to j-i, i+=1, j+=1
-# else: j+=1 until s[i:j] includes s[j+1]
 
 def longestPalindrome(s):
     n = len(s)
