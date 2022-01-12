@@ -8,5 +8,10 @@ def romanToInt(s):
   result = 0
   i = 0
   while i < len(s):
-    if i+1 < len(s) and rank.index(s[i]) < rank.index(s[i+1]):
-      result += 
+    if i+1 < len(s) and rank[s[i]] < rank[s[i+1]]:
+      result += rank[s[i+1]] - rank[s[i]]
+      i += 2
+    else:
+      result += rank[s[i]]
+      i += 1
+  return result
