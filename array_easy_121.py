@@ -1,18 +1,12 @@
-from re import L
-
-
 def maxProfit(prices):
+    
+    min_price = max(prices)
     max_profit = 0
 
-    max_profit = 0
-
-    for i in range(len(prices)-1):
-        for j in range(i+1, len(prices)):
-            if max_profit < prices[j] - prices[i]:
-                max_profit = prices[j] - prices[i]
+    for p in prices:
+        if p < min_price:
+            min_price = p
+        else:
+            max_profit = max(max_profit, p-min_price)
 
     return max_profit
-    
-            
-
-
