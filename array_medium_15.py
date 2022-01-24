@@ -11,8 +11,6 @@ def threeSum(nums):
 
         target = -sorted_nums[i]
 
-        print(target)
-
         while j < k:
             if sorted_nums[j]+sorted_nums[k] > target:
                 k -= 1
