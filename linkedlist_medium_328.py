@@ -3,27 +3,26 @@
 
 def oddEvenList(head):
 
-    odd = ListNode(None)
-    even_head = ListNode(None)
-    even = ListNode(None)
-    even_head.next = even
+    if head == None:
+        return None
 
-    current = head
+    odd = head
+    even_head = even = ListNode(None)
+    current = head.next
 
-    count = 1
+    count = 0
 
-    while current is not None:
-    		if count % 2 == 1:
-       		odd.next = current
-            odd = current
+    while current:
+        if count % 2 == 0:
+            even.next = current
+            even = even.next
         else:
-        	even.next = current
-            even = current
-        
-        current = current.next
+            odd.next = current
+            odd = odd.next
         count += 1
-    
-    
+        current = current.next
+
+    even.next = None
     odd.next = even_head.next
-    
+
     return head
