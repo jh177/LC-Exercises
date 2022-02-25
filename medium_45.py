@@ -1,4 +1,4 @@
-def can_jump(nums)
+def can_jump(nums):
     count = 0
     current_end = 0
     max_jump = 0
